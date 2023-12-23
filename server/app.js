@@ -1,4 +1,4 @@
-require("dotenv").config({ path: "./config/config.env" });
+require("dotenv").config({ path: ".env" });
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
@@ -16,7 +16,7 @@ app.use("/api", require("./routes/auth"));
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1/mydatabase")
+  .connect("mongodb+srv://bibekshah43:bibekshah43@cluster0.3mvycbw.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     console.log("Connected to MongoDB");
     // Start the server
